@@ -16,11 +16,15 @@
 					Найдено 588 предложений
 				</div>
 				<div class="header__new-ads">
-				<button>Paзместить предложение</button></div>
+				<button class="button__add">Paзместить предложение</button>
+				<button class="button__plus"></button>
+				<button class="button__filter"></button>
+				</div>
 			</div>
 		</header>
 	<main>
 		<div class="sidebar">
+			<div class="sidebar__close"></div>
 			<div class="sidebar__price">
 				<div class="sidebar__header">
 					Цена
@@ -145,15 +149,128 @@
 					<input type="checkbox" id="volvo" />
 					<label for="volvo">Volvo</label>
 				</p>
-
-
 				</form>
 			</div>
 		</div>
-		<div class="content">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta blanditiis iusto officia, nesciunt, amet ratione. Quisquam ea voluptatum, dolores minima iste commodi neque. Natus pariatur ullam recusandae adipisci cupiditate tempore.
+		<div class="content__wrap">
+			<div class="content">
+				<div class="content__item">
+					<div class="item__img__wrap">
+						<img src="img/img_1.png" class="item__img" alt="">
+						<div class="item__price">39 500 $</div>
+					</div>
+					<div class="item__container">
+						<h4 class="item__name">Mercedes CLS350</h4>
+						<div class="item__description">
+							<span class="item__year">2016</span>
+							<span class="item__distance">300 000 km</span>
+							<span class="item__gas">Бензин 1.5</span>
+							<span class="item__gear">А</span>
+						</div>
+					</div>
+				</div>
+				<div class="content__item">
+					<div class="item__img__wrap">
+						<img src="img/img_1.png" class="item__img" alt="">
+						<div class="item__price">39 500 $</div>
+					</div>
+					<div class="item__container">
+						<h4 class="item__name">Mercedes CLS350</h4>
+						<div class="item__description">
+							<span class="item__year">2016</span>
+							<span class="item__distance">300 000 km</span>
+							<span class="item__gas">Бензин 1.5</span>
+							<span class="item__gear">А</span>
+						</div>
+					</div>
+				</div>
+				<div class="content__item">
+					<div class="item__img__wrap">
+						<img src="img/img_1.png" class="item__img" alt="">
+						<div class="item__price">39 500 $</div>
+					</div>
+					<div class="item__container">
+						<h4 class="item__name">Mercedes CLS350</h4>
+						<div class="item__description">
+							<span class="item__year">2016</span>
+							<span class="item__distance">300 000 km</span>
+							<span class="item__gas">Бензин 1.5</span>
+							<span class="item__gear">А</span>
+						</div>
+					</div>
+				</div>
+				<div class="content__item">
+					<div class="item__img__wrap">
+						<img src="img/img_1.png" class="item__img" alt="">
+						<div class="item__price">39 500 $</div>
+					</div>
+					<div class="item__container">
+						<h4 class="item__name">Mercedes CLS350</h4>
+						<div class="item__description">
+							<span class="item__year">2016</span>
+							<span class="item__distance">300 000 km</span>
+							<span class="item__gas">Бензин 1.5</span>
+							<span class="item__gear">А</span>
+						</div>
+					</div>
+				</div>
+				<div class="content__item">
+					<div class="item__img__wrap">
+						<img src="img/img_1.png" class="item__img" alt="">
+						<div class="item__price">39 500 $</div>
+					</div>
+					<div class="item__container">
+						<h4 class="item__name">Mercedes CLS350</h4>
+						<div class="item__description">
+							<span class="item__year">2016</span>
+							<span class="item__distance">300 000 km</span>
+							<span class="item__gas">Бензин 1.5</span>
+							<span class="item__gear">А</span>
+						</div>
+					</div>
+				</div>
+				<div class="content__item">
+					<div class="item__img__wrap">
+						<img src="img/img_1.png" class="item__img" alt="">
+						<div class="item__price">39 500 $</div>
+					</div>
+					<div class="item__container">
+						<h4 class="item__name">Mercedes CLS350</h4>
+						<div class="item__description">
+							<span class="item__year">2016</span>
+							<span class="item__distance">300 000 km</span>
+							<span class="item__gas">Бензин 1.5</span>
+							<span class="item__gear">А</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
 	</div>
+	<div class="modal_form">
+	<form id="add">
+		<h2>Разместить предложение</h2>
+		<label for="brand">
+		<span>Марка автомобиля:</span>
+		<input type="text" name="brand">
+		</label>
+		<label for="model">
+		<span>Модель:</span>
+		<input type="text" name="model">
+		</label>
+		<label for="description">
+		<span>Описание:</span>
+		<textarea name="description" id="" cols="30" rows="10"></textarea>
+		</label>
+		<label for="image">
+		<span>Загрузить фото:</span>
+		<input type="file">
+		</label>
+		<button>Разместить предложение</button>
+		<div class="close_form"></div>
+	</form>
+	</div>
+	<script src="js/common.js"></script>
 </body>
 </html>
