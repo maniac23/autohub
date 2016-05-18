@@ -1,0 +1,97 @@
+[{
+  "name": "Mercedes CLS350",
+  "price": 39500,
+  "year": 2013,
+  "distance": 47000 ,
+  "gas": "Бензин 3.5",
+  "gear": "A",
+  "url": "img/img_1.png"
+}, {
+  "name": "Alfa Romeo MiTo",
+  "price": 9450,
+  "year": 2010 ,
+  "distance": 139087 ,
+  "gas": "Бензин 1.4" ,
+  "gear": "М",
+  "url": "img/img_2.png"
+}, {
+  "name": "Volkswagen Passat CC",
+  "price": 16000,
+  "year": 2011 ,
+  "distance": 53000 ,
+  "gas": "Бензин 2.0" ,
+  "gear": "А",
+  "url": "img/img_3.png"
+}, {
+  "name": "Volvo XC60",
+  "price": 18100,
+  "year": 2010 ,
+  "distance": 88000 ,
+  "gas": "Бензин 2.0" ,
+  "gear": "A",
+  "url": "img/img_4.png"
+}, {
+  "name": "Ford Fusion SE15",
+  "price": 16300,
+  "year": 2013 ,
+  "distance": 13000 ,
+  "gas": "Бензин 1.6" ,
+  "gear": "A",
+  "url": "img/img_5.png"
+}, {
+  "name": "Audi A8",
+  "price": 32900,
+  "year": 2011 ,
+  "distance": 89000 ,
+  "gas": "Дизель 4.0" ,
+  "gear": "A",
+  "url": "img/img_6.png"
+}, {
+  "name": "Mercedes GL500 4MATIC",
+  "price": 21900,
+  "year": 2007,
+  "distance": 125000,
+  "gas": "Бензин 5.5" ,
+  "gear": "A",
+  "url": "img/img_7.png"
+}, {
+  "name": "Porsche Macan S",
+  "price": 65500,
+  "year": 2014 ,
+  "distance": 9700 ,
+  "gas": "Бензин 3.0" ,
+  "gear": "A",
+  "url": "img/img_8.png"
+}, {
+  "name": "Audi A8",
+  "price": 6000,
+  "year": 2008 ,
+  "distance": 86280 ,
+  "gas": "Бензин 1.2" ,
+  "gear": "M",
+  "url": "img/img_9.png"
+}, {
+  "name": "Mercedes CLS350",
+  "price": 39500,
+  "year": 2013,
+  "distance": 47000 ,
+  "gas": "Бензин 3.5",
+  "gear": "A",
+  "url": "img/img_1.png"
+}, {
+  "name": "Alfa Romeo MiTo",
+  "price": 9450,
+  "year": 2010 ,
+  "distance": 139087 ,
+  "gas": "Бензин 1.4" ,
+  "gear": "М",
+  "url": "img/img_2.png"
+}, {
+  "name": "Volkswagen Passat CC",
+  "price": 16000,
+  "year": 2011 ,
+  "distance": 53000 ,
+  "gas": "Бензин 2.0" ,
+  "gear": "А",
+  "url": "img/img_3.png"
+}]

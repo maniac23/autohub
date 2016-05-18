@@ -6,8 +6,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="js/app.js"></script>
 </head>
-<body>
+<body ng-app="autoHub">
 	<div class="container">
 		<header>
 			<div class="header__logo">Автохаб</div>
@@ -153,94 +155,19 @@
 			</div>
 		</div>
 		<div class="content__wrap">
-			<div class="content">
-				<div class="content__item">
-					<div class="item__img__wrap">
-						<img src="img/img_1.png" class="item__img" alt="">
-						<div class="item__price">39 500 $</div>
+			<div class="content" ng-controller="carsController">
+				<div class="content__item" ng-repeat="car in cars">
+					<div class="item__img__wrap" >
+						<img ng-src="{{car.url}}" class="item__img" alt="{{car.name}}">
+						<div class="item__price">{{car.price +" $"}}</div>
 					</div>
 					<div class="item__container">
-						<h4 class="item__name">Mercedes CLS350</h4>
+						<h4 class="item__name">{{car.name}}</h4>
 						<div class="item__description">
-							<span class="item__year">2016</span>
-							<span class="item__distance">300 000 km</span>
-							<span class="item__gas">Бензин 1.5</span>
-							<span class="item__gear">А</span>
-						</div>
-					</div>
-				</div>
-				<div class="content__item">
-					<div class="item__img__wrap">
-						<img src="img/img_1.png" class="item__img" alt="">
-						<div class="item__price">39 500 $</div>
-					</div>
-					<div class="item__container">
-						<h4 class="item__name">Mercedes CLS350</h4>
-						<div class="item__description">
-							<span class="item__year">2016</span>
-							<span class="item__distance">300 000 km</span>
-							<span class="item__gas">Бензин 1.5</span>
-							<span class="item__gear">А</span>
-						</div>
-					</div>
-				</div>
-				<div class="content__item">
-					<div class="item__img__wrap">
-						<img src="img/img_1.png" class="item__img" alt="">
-						<div class="item__price">39 500 $</div>
-					</div>
-					<div class="item__container">
-						<h4 class="item__name">Mercedes CLS350</h4>
-						<div class="item__description">
-							<span class="item__year">2016</span>
-							<span class="item__distance">300 000 km</span>
-							<span class="item__gas">Бензин 1.5</span>
-							<span class="item__gear">А</span>
-						</div>
-					</div>
-				</div>
-				<div class="content__item">
-					<div class="item__img__wrap">
-						<img src="img/img_1.png" class="item__img" alt="">
-						<div class="item__price">39 500 $</div>
-					</div>
-					<div class="item__container">
-						<h4 class="item__name">Mercedes CLS350</h4>
-						<div class="item__description">
-							<span class="item__year">2016</span>
-							<span class="item__distance">300 000 km</span>
-							<span class="item__gas">Бензин 1.5</span>
-							<span class="item__gear">А</span>
-						</div>
-					</div>
-				</div>
-				<div class="content__item">
-					<div class="item__img__wrap">
-						<img src="img/img_1.png" class="item__img" alt="">
-						<div class="item__price">39 500 $</div>
-					</div>
-					<div class="item__container">
-						<h4 class="item__name">Mercedes CLS350</h4>
-						<div class="item__description">
-							<span class="item__year">2016</span>
-							<span class="item__distance">300 000 km</span>
-							<span class="item__gas">Бензин 1.5</span>
-							<span class="item__gear">А</span>
-						</div>
-					</div>
-				</div>
-				<div class="content__item">
-					<div class="item__img__wrap">
-						<img src="img/img_1.png" class="item__img" alt="">
-						<div class="item__price">39 500 $</div>
-					</div>
-					<div class="item__container">
-						<h4 class="item__name">Mercedes CLS350</h4>
-						<div class="item__description">
-							<span class="item__year">2016</span>
-							<span class="item__distance">300 000 km</span>
-							<span class="item__gas">Бензин 1.5</span>
-							<span class="item__gear">А</span>
+							<span class="item__year">{{car.year}}</span>
+							<span class="item__distance">{{car.distance +" km"}}</span>
+							<span class="item__gas">{{car.gas}}</span>
+							<span class="item__gear">{{car.gear}}</span>
 						</div>
 					</div>
 				</div>
