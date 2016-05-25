@@ -42,8 +42,10 @@ window.onclick = function(event) {
 
 // getting cars list from template
 var cars = [];
+var loadedCars = [];
 var container = document.querySelector('.content');
 getCars();
+
 function renderCars(cars){
   cars.forEach(function(car) {
     var element = getElementFromTemplate(car);
@@ -51,22 +53,21 @@ function renderCars(cars){
   });
 };
 
-
 function getElementFromTemplate(data) {
   var template = document.querySelector('#car-template');
   if ('content' in template) {
     var element = template.content.children[0].cloneNode(true);
   } else {
-    var element = template.children[0].cloneNode(true);
+    var element = template.content.childNodes[0].cloneNode(true);
   }
-  
   element.querySelector('.item__name').textContent = data.name;
   element.querySelector('.item__price').textContent = data.price + " $";
   element.querySelector('.item__year').textContent = data.year;
   element.querySelector('.item__distance').textContent = data.distance + " km";
   element.querySelector('.item__gas').textContent = data.gas;
   element.querySelector('.item__gear').textContent = data.gear;
-
+  element.querySelector('.item__name').setAttribute('data-Id', data.id);
+  element.classList.add(data.id);
   var img = new Image();
   img.onload = function(){
     element.querySelector('.item__img').setAttribute("src", img.src );
@@ -76,16 +77,12 @@ function getElementFromTemplate(data) {
   return element;
 };
 
-
-
-
-
 function getCars() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', '../auto_data.json');
   xhr.onload = function(e) {
     var rawData = e.target.response;
-    var loadedCars = JSON.parse(rawData);
+    loadedCars = JSON.parse(rawData);
 
     // drawing loaded data to DOM
     renderCars(loadedCars);
@@ -93,3 +90,24 @@ function getCars() {
   xhr.send();
 
 };
+
+// filters
+$(document).ready(function () {
+  $('#brand').find('input:checkbox').on('click', function () {
+    if(this.checked){
+      $('.content__item').fadeOut();
+      $('#brand').find('input:checked').each(function () {
+        $('.content__item.' + $(this).attr('id')).fadeIn();
+      });
+    } else{
+      if($('#brand').find('input:checked').length > 0){
+       $('#brand').find('input:checked').each(function () {
+        $('.content__item').fadeOut();
+        $('.content__item.' + $(this).attr('id')).fadeIn();
+      });
+     } else{
+       $('.content__item').fadeIn();
+     }  
+   }
+ }); 
+}); 

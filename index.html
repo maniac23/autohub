@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>АвтоХаб</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/normalize.css">
@@ -38,8 +40,7 @@
 				<div class="sidebar__header">Марка</div>
 				<form id="brand">
 				<p>
-					<input type="checkbox" id="alfa_romeo"/>
-					<label for="alfa_romeo">Alfa Romeo</label>
+					<button onclick="renderCars(loadedCars)">Показать все</button>
 				</p>
 				<p>
 					<input type="checkbox" id="audi" />
@@ -199,6 +200,7 @@
 		<div class="close_form"></div>
 	</form>
 	</div>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>

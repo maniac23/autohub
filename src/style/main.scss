@@ -6,7 +6,7 @@ html{
 body{
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow-x: hidden;
 	font-size: 1.6rem;
 	color: $main_color;
 	background-color: #f9f9f9;
@@ -163,7 +163,6 @@ header{
 .content{
  padding: 1rem;
  display: flex;
- justify-content: space-between;
  flex-direction: row;
  flex-wrap: wrap;
  align-content: flex-start;
@@ -174,6 +173,7 @@ header{
  	border-radius: 3px;
  	flex-basis: 30%;
  	margin: 1rem;
+ 	margin-right: 3rem;
  	transition: all 0.3s;
  	max-width: 300px;
  	.item__container{
@@ -286,6 +286,9 @@ header{
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 10%; opacity: 1}
+}
+.hidden{
+	display: none;
 }
 
 @import 'media.scss';
