@@ -58,7 +58,15 @@
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
-	/**/
+	.content{
+		.content__item{
+			.item__description{
+				span{
+					margin-right: 0.3rem;
+				}
+			}
+		}
+	}
 }
 
 
