@@ -1,0 +1,25 @@
+@mixin button($color, $padding, $bgc){
+  border: none;
+  font-size: 1.6rem;
+  color: $color;
+  background-color: $bgc;
+  padding: $padding;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.3s ease-in;
+  &:hover{
+    background-color: lighten($bgc, 15%);
+    color: darken($color, 15%);
+  }
+}
+
+@mixin icon($width, $height, $bg, $bgz){
+  width: $width;
+  height: $width;
+  background: #{$bg} no-repeat center center;
+  background-size: $bgz ;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}

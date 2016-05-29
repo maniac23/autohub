@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'mixins.scss';
 html{
 	font-family:'Roboto', sans-serif;
 	font-size: 10px;
@@ -39,34 +40,14 @@ header{
 	color: $main_color;
 }
 .header__new-ads{
-	.button__add{
-		border: none;
-		font-size: 1.6rem;
-		color: $main_color;
-		background-color:lighten($link_color, 50%);
-		padding: 0.5rem;
-		cursor: pointer;
-		border-radius: 3px;
-		transition: all 0.3s ease-in-out;
-		&:hover{
-			background-color: lighten($link_color, 30%);
-			color: #fff;
-		}
+	.btn__add{
+		@include button(darken($main_color,20%), 1rem, lighten($link_color, 40%));
 	}
-	.button__plus{
-		width: 3.5rem;
-		height: 3rem;
-		background: url("../img/add.svg") no-repeat center center;
-		background-size: 3rem;
-		border: none;
-		background-color: transparent;
-		cursor: pointer;
-		display: none;
+	.icon__plus{
+		@include icon(3.5rem, 3rem, url("../img/add.svg"), 3rem);
 	}
-	.button__filter{
-		@extend .button__plus;
-		background: url("../img/filter.svg") no-repeat center center;
-		background-size: 3rem;
+	.icon__filter{
+		@include icon(3.5rem, 3rem, url("../img/filter.svg"), 3rem);
 	}
 }
 .sidebar{
@@ -84,21 +65,18 @@ header{
 		margin-bottom: 1rem;
 		font-size: 1.8rem;
 	}
-	.sidebar__close{
-		border: none;
-		width: 4rem;
-		height: 4rem;
-		background: url("../img/close.svg") no-repeat center center;
-		background-size: 4rem;
+	.icon__close{
+		@include icon(4rem, 4rem, url("../img/close.svg"), 4rem);
 		position: absolute;
 		top: 1%;
 		left: 0;
-		cursor: pointer;
 		transition: 0.3s;
-		display: none;
 		&:hover{
 		transform: rotate(360deg);
 		}
+	}
+	.btn__reload{
+		@include button(darken($main_color,20%), 1rem, lighten($link_color, 40%));
 	}
 	.price__filter{
 		border-bottom: 1px solid $main_color;
@@ -244,7 +222,7 @@ header{
 	}
 	label{
 		display: block;
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 		text-transform: uppercase;
 	}
 	input[type="text"],
@@ -257,40 +235,44 @@ header{
 		width: 90%;
 		text-indent: 1rem;
 		font-size: 1.5rem;
-		margin-top: 0.3rem;
+		margin: 0 0 15px 0;
 		color: $main_color;
 	}
-	button{
-		text-align: center;
-		border: none;
-		background-color: $main_color;
-		padding: 1rem;
-		border-radius: 0.3rem;
-		cursor: pointer;
-		transition: 0.3s;
-		font-weight: bold;
-		&:hover{
-			transform: scale(1.05);
-		}
+	.btn__upload{
+		position: relative;
+		overflow: hidden;
+		margin: 15px 0;
+		@include button(darken($main_color,20%), 0.7rem, lighten($link_color, 40%));
 	}
-	.close_form{
-		background: url("../img/close.svg") no-repeat center center;
-		width: 6rem;
-		height: 6rem;
-		background-size: 4rem;
+
+	input[type="file"]{
 		position: absolute;
 		top: 0;
 		right: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 2rem;
 		cursor: pointer;
+		opacity: 0;
+	}
+	.btn__submit{
+		@include button(lighten($main_color, 40%), 1.5rem, $main_color);
+		text-align: center;
+		display: block;
+		margin: 2rem auto 1rem;
+	}
+	.close_form{
+		@include icon(4rem, 4rem, url("../img/close.svg"), 4rem);
+		position: absolute;
+		top: 0;
+		right: 0;
+		display: block;
 	}
 }
 
 @keyframes animatetop {
     from {top: -300px; opacity: 0}
     to {top: 10%; opacity: 1}
-}
-.hidden{
-	display: none;
 }
 
 @import 'media.scss';

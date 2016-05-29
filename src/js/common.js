@@ -1,10 +1,10 @@
-var filterOpen = document.querySelector(".button__filter");
-var filterClose = document.querySelector(".sidebar__close");
+var filterOpen = document.querySelector(".icon__filter");
+var filterClose = document.querySelector(".icon__close");
 var sidebar = document.querySelector(".sidebar");
 var modal = document.querySelector(".modal_form");
 var modalForm = document.getElementById("add");
-var modalOpenButton = document.querySelector(".button__add");
-var modalOpenIcon = document.querySelector(".button__plus");
+var modalOpenButton = document.querySelector(".btn__add");
+var modalOpenIcon = document.querySelector(".icon__plus");
 var modalClose = document.querySelector(".close_form");
 
 // open & close sidebar

@@ -19,17 +19,20 @@
 		overflow-x: hidden;
 		transition: 0.5s;
 		padding: 0;
-		.sidebar__close{
-			display: inline-block;
+		.icon__close{
+			display: block;
 		}
 	}
-	.button__add{
+	.btn__add{
 		display: none;
 	}
 	.header__new-ads{
-		.button__plus,
-		.button__filter{
+		.icon__plus,
+		.icon__filter{
 			display: inline-block;
+		}
+		.icon__plus{
+			margin-right: 3rem;
 		}
 	}
 }
@@ -53,7 +56,26 @@
 	}
 }
 @media only screen and (max-width : 480px){
-	
+	header{
+		flex-direction: column;
+		margin-bottom: 2rem;
+	}
+	.header__logo{
+		margin: auto;
+		text-align: center;
+	}
+	.header__wrapper{
+		flex-direction: column;
+	}
+	.header__all-ads{
+		margin-top: 1.5rem;
+	}
+	.header__new-ads{
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+		margin-top: 1.5rem;
+	}
 }
 
 /* Custom, iPhone Retina */

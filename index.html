@@ -18,15 +18,15 @@
 					Найдено 588 предложений
 				</div>
 				<div class="header__new-ads">
-				<button class="button__add">Paзместить предложение</button>
-				<button class="button__plus"></button>
-				<button class="button__filter"></button>
+				<button class="btn__add">Paзместить предложение</button>
+				<div class="icon__plus"></div>
+				<div class="icon__filter"></div>
 				</div>
 			</div>
 		</header>
 	<main>
 		<div class="sidebar">
-			<div class="sidebar__close"></div>
+			<div class="icon__close"></div>
 			<div class="sidebar__price">
 				<div class="sidebar__header">
 					Цена
@@ -40,7 +40,7 @@
 				<div class="sidebar__header">Марка</div>
 				<form id="brand">
 				<p>
-					<button onclick="renderCars(loadedCars)">Показать все</button>
+					<button class="btn__reload" onclick="renderCars(loadedCars)">Показать все</button>
 				</p>
 				<p>
 					<input type="checkbox" id="audi" />
@@ -180,23 +180,17 @@
 	<div class="modal_form">
 	<form id="add">
 		<h2>Разместить предложение</h2>
-		<label for="brand">
-		<span>Марка автомобиля:</span>
+		<label for="brand">Марка автомобиля:</label>
 		<input type="text" name="brand">
-		</label>
-		<label for="model">
-		<span>Модель:</span>
+		<label for="model">Модель:</label>
 		<input type="text" name="model">
-		</label>
-		<label for="description">
-		<span>Описание:</span>
-		<textarea name="description" id="" cols="30" rows="10"></textarea>
-		</label>
-		<label for="image">
-		<span>Загрузить фото:</span>
+		<label for="description">Описание:</label>
+		<textarea name="description"></textarea>
+		<button class="btn__upload">
+		Загрузить фото
 		<input type="file">
-		</label>
-		<button>Разместить предложение</button>
+		</button>
+		<button class="btn__submit">Разместить предложение</button>
 		<div class="close_form"></div>
 	</form>
 	</div>
