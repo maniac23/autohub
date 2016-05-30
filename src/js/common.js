@@ -6,7 +6,6 @@ var modalForm = document.getElementById("add");
 var modalOpenButton = document.querySelector(".btn__add");
 var modalOpenIcon = document.querySelector(".icon__plus");
 var modalClose = document.querySelector(".close_form");
-
 // open & close sidebar
 function openSideBar(){
 	sidebar.style.width = "300px";
@@ -107,7 +106,7 @@ $(document).ready(function () {
       });
      } else{
        $('.content__item').fadeIn();
-     }  
+     }
    }
- }); 
-}); 
+ });
+});
